@@ -37,11 +37,27 @@
  *     this.next = null;
  * }
  */
+
 /**
  * @param {ListNode} head
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function(head, n) {
-    
+var removeNthFromEnd = function (head, n) {
+    let fitstp = head, slowp = head;
+    //快指针先移动n个节点
+    for (let i = 0; i < n; i++) {
+        fitstp = fitstp.next;
+    }
+    //如果快指针直接移动到了尾部，说明n是节点长度，删掉head
+    if (!fitstp) {
+        return head.next;
+    }
+    //快慢指针同时移动
+    while (!!fitstp.next) {
+        fitstp = fitstp.next;
+        slowp = slowp.next;
+    }
+    slowp.next = slowp.next.next;
+    return head;
 };
