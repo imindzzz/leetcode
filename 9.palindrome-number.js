@@ -47,6 +47,19 @@
  * @return {boolean}
  */
 var isPalindrome = function (x) {
-    let str = x.toString();
-    return str === Array.from(str).reverse().join("");
+    if (x < 0) {
+        return false;
+    }
+    if (x < 10) {
+        return true;
+    }
+    let arr = x.toString();
+    let i = 0, j = arr.length - 1;
+    while (i < j) {
+        if (arr[i] != arr[j]) {
+            return false;
+        }
+        i++; j--;
+    }
+    return true;
 };
