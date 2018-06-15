@@ -32,18 +32,23 @@
  * @return {ListNode}
  */
 var mergeTwoLists = function (l1, l2) {
-    let re = l1;
-    let pre = null;
+    if (!l1) {
+        return l2;
+    }
+    if (!l2) {
+        return l1;
+    }
+    let re = l1; //返回值
+    let pre = null; //前一个Node
     while ((l1 != null && l2 != null)) {
         if (l1.val > l2.val) {
             let temp = l2;
             l2 = l2.next;
             if (pre === null) {
-                //如果是l1的第一个节点
                 temp.next = l1;
                 re = temp;
             } else {
-                temp.next = l1.next;
+                temp.next = l1;
                 pre.next = temp;
                 l1 = temp;
             }
@@ -53,17 +58,8 @@ var mergeTwoLists = function (l1, l2) {
         pre = l1;
         l1 = l1.next;
     };
+    if (!!l2) {
+        pre.next = l2;
+    }
     return re;
 };
-
-
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
-function test(arr) {
-    do {
-        let val = arr.pop();
-    } while (arr.length >= 0)
-}
-test([1, 2]);
