@@ -83,13 +83,15 @@ const KV = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 var romanToInt = function (s) {
     let i = s.length - 1;
     let value = KV[s[i]];
+    let before = value;
     while (i--) {
-        let current = KV[s[i]], before = KV[s[i + 1]];
+        let current = KV[s[i]];
         if (current < before) {
             value -= current;
         } else {
             value += current;
         }
+        before = current;
     }
     return value;
 };
