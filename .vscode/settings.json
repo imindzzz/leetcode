@@ -1,5 +1,8 @@
 {
     "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
         "iostream": "cpp",
         "vector": "cpp",
         "array": "cpp",
@@ -62,6 +65,21 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "ios": "cpp",
+        "iterator": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp"
     }
 }
