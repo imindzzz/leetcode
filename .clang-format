@@ -1,0 +1,4 @@
+# VS Code + Clang-format 格式化代码 - 知乎
+# https://zhuanlan.zhihu.com/p/356143396
+Language: Cpp
+BasedOnStyle: Chromium
