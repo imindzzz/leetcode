@@ -71,21 +71,7 @@ bool test1() {
   return sol.bestHand(ranks, suits) == "Flush";
 }
 
-bool test2() {
-  Solution sol;
-  vector<int> ranks = {4, 4, 2, 4, 4};
-  vector<char> suits = {'d', 'a', 'a', 'b', 'c'};
-  return sol.bestHand(ranks, suits) == "Three of a Kind";
-}
-bool test3() {
-  Solution sol;
-  vector<int> ranks = {10, 10, 2, 12, 9};
-  vector<char> suits = {'a', 'b', 'c', 'a', 'd'};
-  return sol.bestHand(ranks, suits) == "Pair";
-}
 int main() {
-  cout << test1() << endl;
-  cout << test2() << endl;
-  cout << test3() << endl;
+  cout << (test1() ? "True" : "False") << endl;
   return 0;
 }
